@@ -1,21 +1,12 @@
 const cardsContainer = document.querySelector(".cards .container");
 const searchBar = document.querySelector(".container .search");
-window.addEventListener("load", (event) => {
-  fetch("../static-job-listings-master/data.json")
-    .then((response) => response.json())
-    .then((data) =>
-      data.forEach((element) => {
-        cardsContainer.innerHTML += getCardHtml(element);
-      })
-    )
-    .catch((err) => console.log(err));
-});
+
 
 const data = [
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "../static-job-listings-master/images/photosnap.svg",
+    "logo": "/images/photosnap.svg",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -30,7 +21,7 @@ const data = [
   {
     "id": 2,
     "company": "Manage",
-    "logo": "../static-job-listings-master/images/manage.svg",
+    "logo": "/images/manage.svg",
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -45,7 +36,7 @@ const data = [
   {
     "id": 3,
     "company": "Account",
-    "logo": "../static-job-listings-master/images/account.svg",
+    "logo": "/images/account.svg",
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -60,7 +51,7 @@ const data = [
   {
     "id": 4,
     "company": "MyHome",
-    "logo": "../static-job-listings-master/images/myhome.svg",
+    "logo": "/images/myhome.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -75,7 +66,7 @@ const data = [
   {
     "id": 5,
     "company": "Loop Studios",
-    "logo": "../static-job-listings-master/images/loop-studios.svg",
+    "logo": "/images/loop-studios.svg",
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -90,7 +81,7 @@ const data = [
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "../static-job-listings-master/images/faceit.svg",
+    "logo": "/images/faceit.svg",
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -105,7 +96,7 @@ const data = [
   {
     "id": 7,
     "company": "Shortly",
-    "logo": "../static-job-listings-master/images/shortly.svg",
+    "logo": "/images/shortly.svg",
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -120,7 +111,7 @@ const data = [
   {
     "id": 8,
     "company": "Insure",
-    "logo": "../static-job-listings-master/images/insure.svg",
+    "logo": "/images/insure.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -135,7 +126,7 @@ const data = [
   {
     "id": 9,
     "company": "Eyecam Co.",
-    "logo": "../static-job-listings-master/images/eyecam-co.svg",
+    "logo": "/images/eyecam-co.svg",
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -150,7 +141,7 @@ const data = [
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": "../static-job-listings-master/images/the-air-filter-company.svg",
+    "logo": "/images/the-air-filter-company.svg",
     "new": false,
     "featured": false,
     "position": "Front-end Dev",
