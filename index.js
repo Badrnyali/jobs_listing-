@@ -2,8 +2,8 @@ const dataJson = [
   {
     currentUser: {
       image: {
-        png: "./images/avatars/image-juliusomo.png",
-        webp: "./images/avatars/image-juliusomo.webp",
+        png: "images/avatars/image-juliusomo.png",
+        webp: "images/avatars/image-juliusomo.webp",
       },
       username: "juliusomo",
     },
@@ -16,8 +16,8 @@ const dataJson = [
         score: 12,
         user: {
           image: {
-            png: "./images/avatars/image-amyrobson.png",
-            webp: "./images/avatars/image-amyrobson.webp",
+            png: "images/avatars/image-amyrobson.png",
+            webp: "images/avatars/image-amyrobson.webp",
           },
           username: "amyrobson",
         },
@@ -31,8 +31,8 @@ const dataJson = [
         score: 5,
         user: {
           image: {
-            png: "./images/avatars/image-maxblagun.png",
-            webp: "./images/avatars/image-maxblagun.webp",
+            png: "images/avatars/image-maxblagun.png",
+            webp: "images/avatars/image-maxblagun.webp",
           },
           username: "maxblagun",
         },
@@ -46,8 +46,8 @@ const dataJson = [
             replyingTo: "maxblagun",
             user: {
               image: {
-                png: "./images/avatars/image-ramsesmiron.png",
-                webp: "./images/avatars/image-ramsesmiron.webp",
+                png: "images/avatars/image-ramsesmiron.png",
+                webp: "images/avatars/image-ramsesmiron.webp",
               },
               username: "ramsesmiron",
             },
@@ -61,8 +61,8 @@ const dataJson = [
             replyingTo: "ramsesmiron",
             user: {
               image: {
-                png: "./images/avatars/image-juliusomo.png",
-                webp: "./images/avatars/image-juliusomo.webp",
+                png: "images/avatars/image-juliusomo.png",
+                webp: "images/avatars/image-juliusomo.webp",
               },
               username: "juliusomo",
             },
@@ -80,9 +80,9 @@ function comment(data, className = "", deleteButton = "", youIcon = "") {
   let commentHtml = `
   <div class="comment ${className}">
           <div class="stars">
-            <img class="stars_plus" src="../interactive-comments-section-main/images/icon-plus.svg" alt="">
+            <img class="stars_plus" src="images/icon-plus.svg" alt="">
             <span class="stars_number">${data.score}</span>
-            <img class="stars_minus" src="../interactive-comments-section-main/images/icon-minus.svg" alt="">
+            <img class="stars_minus" src="images/icon-minus.svg" alt="">
           </div>
           <div class="details">
             <div class="details_upper">
@@ -94,7 +94,7 @@ function comment(data, className = "", deleteButton = "", youIcon = "") {
               </div>
               <div class="details_edit">
               ${deleteButton}
-                <img class="details_edit_reply" src="../interactive-comments-section-main/images/icon-reply.svg" alt="">
+                <img class="details_edit_reply" src="images/icon-reply.svg" alt="">
                 <span class="details_edit_reply">Reply</span>
               </div>
             </div>
@@ -117,7 +117,7 @@ dataJson.map((d) => {
     if (i.replies.length) {
       i.replies.map((m) => {
         if (m.user.username === "juliusomo") {
-          let deleteButton = `<img class="details_edit_delete" src="../interactive-comments-section-main/images/icon-delete.svg" alt="">
+          let deleteButton = `<img class="details_edit_delete" src="images/icon-delete.svg" alt="">
           <span class="details_edit_delete">Delete</span>`;
           let youIcon = `<p>You</p>`;
           var userReplyHtml = comment(
@@ -142,7 +142,7 @@ dataJson.map((d) => {
 function addingComment(className = "", replyOrSend) {
   const sendComment = `
   <div class="${className} comment your_comment">
-  <img src="../interactive-comments-section-main/images/avatars/image-juliusomo.png" alt="">
+  <img src="images/avatars/image-juliusomo.png" alt="">
   <textarea placeholder="Add comment ..." cols="55" rows="6" class="comment_text"></textarea>
   <button id="send">${replyOrSend}</button>
   </div>
